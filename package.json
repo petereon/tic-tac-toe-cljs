@@ -1,0 +1,18 @@
+{
+	"name": "tic-tac-toe-cljs",
+	"scripts": {
+		"ancient": "clojure -Sdeps '{:deps {com.github.liquidz/antq {:mvn/version \"RELEASE\"}}}' -m antq.core",
+		"watch": "concurrently \"npx shadow-cljs watch app browser-test karma-test\" \"sass --watch src/styles.scss resources/public/styles.css\"",
+		"release": "npx shadow-cljs release app",
+		"build-report": "npx shadow-cljs run shadow.cljs.build-report app target/build-report.html"
+	},
+	"dependencies": {
+		"react": "17.0.2",
+		"react-dom": "17.0.2",
+		"sass": "^1.69.5"
+	},
+	"devDependencies": {
+		"concurrently": "^8.2.2",
+		"shadow-cljs": "2.20.5"
+	}
+}

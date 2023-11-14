@@ -1,0 +1,15 @@
+$cell-size: 50px;
+
+.cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: $cell-size;
+    width: $cell-size;
+    border: 1px solid black;
+    font-size: 40px;
+}
+
+.cell:hover {
+    background-color: #eee;
+}
